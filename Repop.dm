@@ -1,0 +1,46 @@
+world/proc/Rep()
+	spawn()
+		while(1)
+			sleep(7080)
+			world.Repop()
+			sleep(3)
+			world<<"<B><font size=1><font color=#66FFFF>A<font color=#33FFCC>K<font color=#00FF99>I<font color=#33FF66>R<font color=#66FF33>A, <font color=#6600FF>The <font color=#6600CC>Almighty <font color=#660099>God <font color=#660066>restored <font color=#660033>all <font color=#990000>life <font color=#CC0033>in <font color=#990066>the <font color=#CC3366>universe!!!"
+			for(var/obj/crater/A in world)
+				del(A)
+			for(var/obj/crater1/A in world)
+				del(A)
+			for(var/obj/crater2/A in world)
+				del(A)
+			for(var/obj/crater3/A in world)
+				del(A)
+			for(var/obj/crater4/A in world)
+				del(A)
+//---------Crater Clearer
+world/proc/CraterClearer()
+	spawn()
+		while(1)
+			sleep(3000)
+			for(var/obj/crater/A in world)
+				del(A)
+			for(var/obj/crater1/A in world)
+				del(A)
+			for(var/obj/crater2/A in world)
+				del(A)
+			for(var/obj/crater3/A in world)
+				del(A)
+			for(var/obj/crater4/A in world)
+				del(A)
+//---------Moon Cycle
+world/proc/Moon()
+	spawn()
+		while(1)
+			sleep(12080)
+			sleep(3)
+			world<<"<B><font size=1><font color=#66FFFF>A<font color=#33FFCC> Moon<font color=#00FF99> Appears<font color=#33FF66> In<font color=#66FF33> The<font color=#6600FF> Sky!"
+			world<<"<B><font color=#660099>All non-saiyans be VERY careful!!!"
+			for(var/mob/M in world)
+				M.moon = 1
+				spawn(1)
+				M.Oozaru()
+				M.moon = 0
+
